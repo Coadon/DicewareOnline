@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="/dist/tailwind.css" rel="stylesheet" />
+    </head>
+    <body class="mx-20 text-2xl">
+        <h1 class="my-20 text-center text-5xl">
+            Diceware Online<br />Automated passphrase generator.
+        </h1>
+        <div id="main-fields" class="hidden text-center">
+            <input type="number" id="length-field" class="bg-green-100 w-12 p-1 text-green-800" value="6" max="20" min="1"> words<br>
+
+            <button
+                class="rounded-full bg-green-100 px-7 py-4 mt-10 font-semibold text-green-700 hover:bg-green-200"
+                onclick="beginGenerateRoutine()"
+            >
+                GENERATE
+            </button>
+
+            <div
+                class="w-200 mx-auto mt-10 flex h-14 items-center justify-center rounded-full bg-green-100 font-semibold text-green-800"
+            >
+                <button id="output-field" class="text-center" onclick="copyOutputField()"></p>
+            </div>
+            <p class="text-sm text-green-700">Click above to copy</p>
+        </div>
+
+        <p id="loading-text" class="text-center text-green-700">
+            loading diceware stuffs... please wait...
+        </p>
+
+        <footer class="mt-20 text-sm text-center">
+            This program is a free and open source software licensed under the <a href="https://opensource.org/licenses/MIT">MIT license.</a>
+            <br>
+            <a href="https://en.wikipedia.org/wiki/Diceware">Checkout Diceware on Wikipedia.</a>
+            <br>
+            Copyright © <a href="https://github.com/Coadon">Rupert Huang</a>, 2023;
+        </footer>
+
+        <script defer async src="index.js"></script>
+    </body>
+</html>
