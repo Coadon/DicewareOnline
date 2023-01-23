@@ -3,7 +3,7 @@ let diceware_index = [];
 // Public
 function setupRoutine() {
     // Fetch diceware
-    fetch("../diceware_index.txt")
+    fetch("diceware_index.txt")
         .then((response) => response.text())
         .then((data) => {
             diceware_index = data.split("\n");
